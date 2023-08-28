@@ -1,0 +1,102 @@
+/* Reset de Estilos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  background: #999;
+}
+
+/* Estilos do Container */
+.wrapper {
+  width: 100%;
+  max-width: 380px;
+  background-color: #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos da Tela */
+.screen {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 35px;
+  text-align: right;
+  overflow: auto;
+}
+
+/* Estilos dos Botões de Cálculo */
+.calc-button-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.calc-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 65px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.calc-button:last-child {
+  background-color: #000;
+  color: #fff;
+}
+
+.calc-button:hover {
+  background-color: #ccc;
+  color: #232323;
+}
+
+.calc-button:active {
+  background-color: #000;
+  color: #ccc;
+}
+
+/* Estilos dos Botões de Largura Especial */
+.double {
+  grid-column: span 2;
+}
+
+.triple {
+  grid-column: span 3;
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+      padding: 1rem;
+      max-width: 100%;
+    }
+  
+    .screen,
+    .calc-button {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .calc-button-row {
+      gap: 5px;
+    }
+  }
